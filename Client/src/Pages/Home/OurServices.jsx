@@ -31,22 +31,31 @@ const OurServices = () => {
   ];
 
   return (
-    <div>
-      <MyContainer className="my-20 space-y-5 bg-secondary">
-        <MyTitle className="text-white text-center mt-5">Our Services</MyTitle>
-        <p className="text-center text-white">
+    <div className="my-20">
+      <div className="bg-secondary rounded-3xl py-16 px-8 text-white space-y-6 shadow-lg">
+        <MyTitle className="text-center text-white">Our Services</MyTitle>
+
+        <p className="text-center max-w-3xl mx-auto">
           Enjoy fast, reliable parcel delivery with real-time tracking and zero
-          hassle.{" "}
+          hassle.
           <span className="hidden md:block">
+            {" "}
             From personal packages to business shipments — we deliver on time,
             every time.
           </span>
         </p>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-5">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="p-6 bg-white rounded-2xl shadow-sm border border-gray-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              className={`p-7 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300 
+                  ${
+                    idx === 1
+                      ? "bg-primary text-white"
+                      : "bg-white text-gray-700"
+                  }
+                  `}
             >
               <img
                 width="48"
@@ -54,15 +63,15 @@ const OurServices = () => {
                 src="https://img.icons8.com/color/48/connection-status-on--v1.png"
                 alt="connection-status-on--v1"
               />
-
-              <h3 className="text-lg font-bold text-secondary mb-2">
+              "
+              <h3 className="text-xl font-semibold text-secondary mb-2">
                 {service.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">{service.info}</p>
+              <p className="text-gray-700 leading-relaxed">{service.info}</p>
             </div>
           ))}
         </div>
-      </MyContainer>
+      </div>
     </div>
   );
 };

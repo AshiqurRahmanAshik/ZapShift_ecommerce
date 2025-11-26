@@ -31,15 +31,19 @@ const HowItWorks = () => {
   ];
 
   return (
-    <MyContainer className="my-10 space-y-5">
-      <MyTitle>How it Works</MyTitle>
+    <div className="my-10 space-y-5">
+      <MyTitle className="text-center">How it Works</MyTitle>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {works.map((work, idx) => (
           <div
             key={idx}
             className="p-6 bg-white rounded-2xl shadow-sm border border-gray-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
           >
-            <img className="w-12 h-10 border rounded border-gray-300" src={work.src} alt={work.alt} />
+            <img
+              className="w-12 h-10 border rounded border-gray-300"
+              src={work.src}
+              alt={work.alt}
+            />
             <h3 className="text-lg font-bold text-secondary mb-2">
               {work.title}
             </h3>
@@ -47,7 +51,7 @@ const HowItWorks = () => {
           </div>
         ))}
       </div>
-    </MyContainer>
+    </div>
   );
 };
 

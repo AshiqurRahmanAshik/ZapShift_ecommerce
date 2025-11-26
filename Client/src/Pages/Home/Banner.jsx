@@ -13,7 +13,7 @@ const Banner = () => {
     { src: banner3, alt: "Delivery service banner" },
   ];
   return (
-    <MyContainer>
+    <div>
       <Carousel infiniteLoop={true} autoPlay={true}>
         {banners.map((banner, idx) => (
           <div key={idx} className="relative">
@@ -27,7 +27,7 @@ const Banner = () => {
           </div>
         ))}
       </Carousel>
-    </MyContainer>
+    </div>
   );
 };
 
