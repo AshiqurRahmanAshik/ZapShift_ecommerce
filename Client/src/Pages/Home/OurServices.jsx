@@ -36,8 +36,11 @@ const OurServices = () => {
         <MyTitle className="text-white text-center mt-5">Our Services</MyTitle>
         <p className="text-center text-white">
           Enjoy fast, reliable parcel delivery with real-time tracking and zero
-          hassle. From personal packages to <br /> business shipments — we
-          deliver on time, every time.
+          hassle.{" "}
+          <span className="hidden md:block">
+            From personal packages to business shipments — we deliver on time,
+            every time.
+          </span>
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-5">
           {services.map((service, idx) => (
