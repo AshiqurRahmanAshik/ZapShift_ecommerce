@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import Banner from "./Banner";
+import MyContainer from "./../../sharedComponents/MyContainer";
 
 const Home = () => {
-    return (
-        <div>
-            Home
-        </div>
-    );
+  return (
+    <MyContainer>
+      <Banner />
+    </MyContainer>
+  );
 };
 
 export default Home;
